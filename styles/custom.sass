@@ -1,0 +1,971 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap')
+@import ./mixins/_rwd
+// 施工區域顯示圖片長寬變數
+$width: 2000
+$height: 1200
+
+/*--------------------------------*\
+	Globel 全域
+/*--------------------------------*\
+
+::selection
+	background-color: #459726
+	color: #ffffff
+
+*
+	color: #181819
+	font-weight: 400
+	text-decoration: none
+	font-family: 'Noto Sans TC', 'Roboto', sans-serif
+	transition: all .3s
+
+ol, ul
+	padding: 0
+	list-style-position: inside
+
+a
+	color: #000000
+
+	&:hover
+		text-decoration: none
+
+input
+	&::placeholder
+		font-size: 14px !important
+		font-weight: 400 !important
+		color: #ababab !important
+
+::-webkit-scrollbar,
+::-webkit-scrollbar
+	width: 8px
+	height: 8px
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track
+	background-color: #e1e1e1
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb
+	background-color: #757575
+	border-radius: 10px
+
+/*--------------------------------*\
+	Core 核心
+/*--------------------------------*\
+
+.wrap
+	width: 100%
+	max-width: 1366px
+
+.wrapper
+	padding: 10px
+
+.container
+	max-width: 878px
+
+.upload-label
+	font-size: 16px
+	font-weight: 400
+	color: #181819
+	line-height: initial
+	margin-bottom: 5px
+
+.upload-demo
+	display: flex
+	flex-flow: column
+
+	.el-upload
+		text-align: start
+		margin-top: 5px
+
+	.el-upload__tip
+		font-size: 13px
+		color: #727272
+		order: -1
+		margin-top: 0
+
+	.el-upload-list
+		&.el-upload-list--text
+			.el-upload-list__item
+				&.is-success
+					.el-upload-list__item-name
+						color: #004B7D
+
+.table-view
+	margin-bottom: 25px
+	padding-top: 10px
+
+	.table-view-title
+		font-size: 18px
+		font-weight: 500
+		margin-bottom: 8px
+
+	table
+		thead
+			tr
+				th
+					background-color: #F5F5F5
+					vertical-align: middle
+
+		tbody
+			tr
+				th
+					font-size: 16px
+					font-weight: 400
+					color: #303133
+					padding: 8px 16px
+					background-color: #F5F5F5
+					width: 180px
+					min-width: 180px
+					max-width: 180px
+					vertical-align: middle
+					white-space: normal
+
+				td
+					font-size: 16px !important
+					font-weight: 400 !important
+					color: #303133 !important
+					padding: 8px 16px !important
+					vertical-align: middle !important
+					// white-space: nowrap !important
+
+.goBack
+	font-weight: 400 !important
+	color: #006BB2 !important
+	padding: 0 !important
+	margin-bottom: 20px !important
+
+	span
+		font-size: 14px
+		font-weight: 400
+		color: #006BB2
+
+	i
+		color: #006BB2
+
+.card
+	border: 1px solid #E6E6E6
+
+.directions
+	font-size: 12px
+	color: #727272
+	margin-bottom: 8px
+	line-height: initial
+
+.row-title
+	font-size: 16px
+	font-weight: 500
+	color: #181819
+	margin-bottom: 0
+
+h2.form-title
+	font-size: 20px
+	font-weight: 500
+	line-height: 28px
+	color: #006BB2
+	margin-bottom: 15px
+
+.sub-title
+	font-size: 15px
+	font-weight: 400
+
+h4.title
+	font-size: 18px
+	font-weight: 500
+	color: #303133
+	margin-bottom: 8px
+
+.list-group
+	.list
+		font-size: 16px
+		font-weight: 400
+		color: #181819
+
+.form-text
+	font-size: 16px
+	line-height: 22.4px
+	margin-bottom: 8px
+
+.notice
+	font-size: 13px
+	padding-left: 0
+
+	.notice-title
+		font-size: 14px
+		color: #727272
+
+	li
+		color: #727272
+		padding-left: 5px
+
+.position-fixed
+	position: fixed
+	width: 100%
+	bottom: 0
+	padding: 10px
+	background-color: #ffffff
+	border-top: 1px solid #e6e6e6
+	z-index: 999
+
+.form-item-inline
+	display: flex
+	width: 100%
+
+	> .el-form-item
+		width: 100%
+
+		.el-form-item__content
+			.el-select
+				width: 100%
+
+.table-resposive
+	.table
+		thead
+			tr
+				th
+					vertical-align: middle
+
+		tbody
+			tr
+				td
+					vertical-align: middle
+
+					.el-form-item
+						.el-form-item__content
+							.el-form-item__error
+								position: initial
+
+table.table
+	border: 1px solid #e6e6e6
+	border-radius: 3px
+
+	thead
+		tr
+			th
+				font-size: 14px
+				font-weight: 500
+				color: #727272
+				white-space: nowrap
+
+	tbody
+		tr
+			td
+				vertical-align: middle
+				font-size: 14px
+				font-weight: 400
+				color: #181818
+
+.openOtherPage
+	padding: 20px
+
+	table
+		thead
+			tr
+				th
+					white-space: normal !important
+
+		tbody
+			tr
+				th
+					width: initial
+					min-width: initial
+					max-width: initial
+
+				td
+					white-space: normal !important
+
+	.pdfs
+		.vue-pdf-embed
+			div
+				canvas
+					margin: auto
+
+.view-title
+	font-size: 24px
+	font-weight: 500
+
+.selected-box
+	> span
+		font-size: 14px
+		font-weight: 400
+		color: #006BB2
+
+.link
+	font-size: 14px
+	text-decoration: underline
+	color: #006BB2	
+
+.note
+	font-size: 12px
+	color: #409EFF
+	font-weight: 400
+
+.pic-container
+	position: relative
+	padding-top: calc($height / $width * 100%)
+
+	.pic
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center
+
+/*--------------------------------*\
+	ElementUI
+/*--------------------------------*/
+
+.el-time-panel__btn
+	&.confirm
+		font-weight: normal !important
+
+.el-table
+	thead.is-group
+		th.el-table__cell
+			background:	initial !important
+
+.el-form-item__label
+	line-height: initial !important
+	margin-bottom: 5px
+	float: initial !important
+	padding: 0 !important
+
+.el-alert
+	position: fixed !important
+	width: 100%
+	max-width: 500px
+	top: 10px
+	right: 10px
+	z-index: 999
+
+	&.el-alert--error
+		.el-alert__icon
+			color: #F56C6C
+
+		.el-alert__content
+			.el-alert__title
+				color: #F56C6C
+
+			.el-alert__closebtn
+				font-size: 14px
+				color: #666666
+
+	&.el-alert--success
+		.el-alert__icon
+			color: #67C23A
+
+		.el-alert__content
+			.el-alert__title
+				color: #67C23A
+
+			.el-alert__closebtn
+				font-size: 14px
+				color: #666666
+
+.el-card
+	border: 1px solid #e6e6e6
+
+.el-input
+	.el-input__inner
+		// padding: 0px 10px
+		border-color: #ababab
+
+	.el-input__suffix
+		.el-input__suffix-inner
+			.el-select__caret
+				color: #181818
+
+		&:focus
+			border: 2px solid #409EFF
+
+	&.is-focus
+		.el-input__inner
+			border-color: initial
+			border: 2px solid #409EFF
+
+.el-select
+	.el-select__tags
+		span
+			.el-tag
+				color: #006BB2
+				background-color: #E6F1F8
+
+				.el-select__tags-text
+					color: #006BB2
+
+				i.el-tag__close
+					font-size: 15px
+					font-weight: 900
+					color: #006BB2
+					background-color: initial
+
+.el-select-group__wrap
+	li
+		.el-select-group
+			list-style-type: none
+
+.el-date-editor
+	&.el-range-editor
+		border: 1px solid #ababab
+
+		.el-icon-date
+			color: #181818
+
+	&.el-date-editor--date
+		.el-input__inner
+			padding-left: 30px
+
+	&.el-range-editor
+		&.is-active
+			border-color: initial
+			border: 2px solid #006BB2
+
+	.el-range-separator
+		width: 7% !important
+
+.el-radio
+	&.is-checked
+		.el-radio__input
+			&.is-checked
+				.el-radio__inner
+					border-color: #006BB2
+					background-color: #ffffff
+
+					&:after
+						width: 9px
+						height: 9px
+						background-color: #006BB2
+
+		.el-radio__label
+			color: #181819 !important
+
+	.el-radio__input
+		.el-radio__inner
+			border: 1px solid #ababab
+
+	.el-radio__label
+		font-weight: 400
+
+.el-upload-list__item
+	&.is-success
+		.el-upload-list__item-name
+			&:hover
+				color: #006BB2 !important
+
+.el-button	
+	span
+		font-weight: 400
+		
+		i
+			font-size: 16px
+
+	&.el-button--small
+		padding: 8px 12px
+
+	&.el-button--primary
+		background-color: #006BB2
+		border-color: #006BB2
+		color: #ffffff
+
+		> span
+			color: #ffffff
+
+			a
+				color: #ffffff !important
+				text-decoration: none
+
+		&.is-plain
+			background-color: #E6F1F8
+			color: #006BB2
+			border-color: #006BB2
+
+			> span
+				color: #006BB2
+
+				a
+					color: #006BB2 !important
+
+	&.el-button--danger
+		background-color: #dc3545
+		border-color: #dc3545
+		color: #ffffff
+
+		span
+			color: #ffffff
+
+	&.el-button--warning
+		background-color: #E6A23C
+		border-color: #E6A23C
+		color: #ffffff
+
+		span
+			color: #ffffff
+
+	&.el-button--success
+		span
+			color: #ffffff
+
+	&:hover
+		opacity: 0.7
+
+.el-checkbox
+	&.d-flex
+		.el-checkbox__input
+			margin-top: 3px
+
+	.el-checkbox__input
+		&.is-disabled
+			.el-checkbox__inner
+				background-color: #F2F6FC !important
+				border-color: #DCDFE6 !important
+
+		.el-checkbox__inner
+			border: 1px solid #ababab
+
+		&.is-indeterminate
+			.el-checkbox__inner
+				background-color: #006BB2
+				border-color: #006BB2
+
+	.el-checkbox__label
+		font-size: 14px
+		white-space: normal
+		width: 100%
+
+	&.is-checked
+		.el-checkbox__input
+			&.is-checked
+				.el-checkbox__inner
+					border-color: #006BB2
+					background-color: #006BB2
+
+		.el-checkbox__label
+			color: #181819 !important
+
+.el-header
+	width: 100%
+	position: fixed
+	background-color: #E6F1F8
+	z-index: 10
+
+	.head
+		font-size: 16px
+		float: right
+
+	.headText
+		line-height: 60px
+
+		.menu-button
+			position: relative
+			width: 20px
+			height: 20px
+			cursor: pointer
+
+			span
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+
+				i
+					font-size: 20px
+					color: #016bb2
+
+.el-container
+	&.sidebox
+		height: 100vh
+
+		.el-aside
+			background-color: rgb(0, 107, 178)
+
+			.el-menu
+				background-color: initial !important
+				height: 100%
+				overflow-y: auto
+
+		.el-container
+			.el-main
+				padding: 0px
+
+.el-checkbox-group
+	.el-checkbox-button
+		&:not(:last-child)
+			margin-right: 15px
+
+		&:hover,
+		&.is-checked
+			::v-deep.el-checkbox-button__inner
+				background-color: rgba(30, 152, 215, 0.25)
+				color: #1e98d7
+				border: 1px solid #1e98d7
+				box-shadow: initial
+
+		::v-deep.el-checkbox-button__inner
+			border: 1px solid #c2c2c2
+			border-radius: 50px
+			padding: 10px 20px
+			font-weight: normal
+
+	.el-checkbox
+		margin-bottom: 7px
+
+.el-table
+	&.el-table--border
+		border: 1px solid #e6e6e6
+
+	.el-table__header-wrapper
+		.el-table__header
+			.has-gutter
+				> tr
+					> th
+						padding: 10px 0px
+						border-right: none
+						border-bottom: 1px solid #e6e6e6
+
+						&.el-table-column--selection
+							text-align: center
+
+							> .cell
+								padding-left: 14px !important
+								padding-right: 14px !important
+								text-align: start
+
+								&::after
+									content: "全選"
+									font-size: 14px
+									color: #727272
+									margin-left: 3px
+
+						> .cell
+							font-size: 14px
+							font-weight: 500
+							color: #727272
+							line-height: 35px
+
+	.el-table__body-wrapper
+		.el-table__body
+			> tbody
+				> tr
+					> td
+						border-right: none
+						padding: 5px 0
+
+						&:first-child
+							.cell
+								// text-align: center
+								padding-left: 14px
+
+								span
+									// color: #727272
+
+						&.fontColorBlue
+							.cell
+								> span
+									color: #006bb2
+
+				tr
+					td
+						.cell
+							// display: -webkit-box
+							// -webkit-line-clamp: 3
+							// -webkit-box-orient: vertical
+							// overflow: hidden
+							// text-overflow: ellipsis
+							// line-height: initial
+							// height: 40px
+							// max-height: 200px
+							// min-height: 40px
+
+	.el-table__fixed-right
+		.el-table__fixed-header-wrapper
+			.el-table__header
+				> thead
+					> tr
+						> th
+							padding: 10px 0
+
+							> .cell
+								font-size: 14px
+								font-weight: 500
+								color: #727272
+								line-height: 35px
+
+		.el-table__fixed-body-wrapper
+			.el-table__body
+				> tbody
+					> tr
+						> td
+							padding: 5px 0
+
+							&:last-child
+								.cell
+									.el-tooltip
+										&.item
+											&:not(:first-child)
+												margin-left: 5px
+
+					tr
+						td
+							.cell
+								// height: 40px
+								// max-height: 40px
+								// min-height: 40px
+
+.el-dialog__wrapper
+	.el-dialog
+		.el-dialog__header
+			padding: 10px
+			display: flex
+			align-items: center
+			justify-content: space-between
+
+			.el-dialog__title
+				font-size: 18px
+				color: #303133
+				font-weight: 500
+
+			.el-dialog__headerbtn
+				position: initial
+
+				i
+					color: #303133
+
+		.el-dialog__body
+			padding: 10px
+
+		.el-dialog__footer
+			padding: 10px
+			text-align: right !important
+
+.el-steps
+	margin-bottom: 30px
+
+	.el-step
+		display: flex !important
+		align-items: center !important
+		flex-basis: initial !important
+		margin-right: 230px !important
+
+		&:not(:last-child)
+			position: relative
+
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				left: 110%
+				width: 170%
+				height: 1px
+				background-color: #727272
+
+		.el-step__head
+			color: #727272
+			border-color: #727272
+			width: initial
+
+			.el-step__line
+				display: none
+
+			.el-step__icon
+				margin-right: 10px
+
+				.el-step__icon-inner
+					color: #727272
+
+		.el-step__main
+			.el-step__title
+				font-size: 14px
+				font-weight: 400
+				color: #727272
+				line-height: initial
+
+			.el-step__description
+				margin-top: 0
+
+.el-popconfirm
+	.el-popconfirm__main
+
+	.el-popconfirm__action
+		.el-button--plain
+			border: 1px solid #006BB2
+			background-color: #E6F1F8
+
+			span
+				color: #006BB2
+
+.el-text-success
+	color: #459726
+	font-size: 12px
+	// font-weight: 400
+
+.el-text-danger
+	color: #D50D1E
+	font-size: 12px
+	// font-weight: 400
+
+.el-form
+	.el-form-item
+		margin-bottom: 22px
+
+		&.is-required
+			label.el-form-item__label
+				&::before
+					position: absolute
+					top: 0
+					right: -15px
+
+			&.is-error
+				.el-checkbox
+					.el-checkbox__input
+						&:not(.is-disabled)
+							.el-checkbox__inner
+								border-color: #F56C6C	
+
+				.el-radio
+					.el-radio__input
+						&:not(.is-disabled)
+							.el-radio__inner
+								border-color: #F56C6C
+
+		.el-form-item__label
+			font-size: 14px
+			font-weight: 400
+			color: #181818
+			line-height: initial
+			position: relative
+			margin-right: 10px
+			white-space: nowrap
+
+		.el-form-item__content
+			line-height: initial
+			width: 100%
+
+			> label
+				font-size: 16px
+				font-weight: 400
+				color: #181818
+				position: relative
+				padding-right: 12px
+				margin-bottom: 8px
+
+				&.required
+					position: relative
+
+					&::before
+						content: '*'
+						color: #F56C6C
+						position: absolute
+						top: 0
+						right: 0
+
+			.el-select
+				width: 100%
+
+.el-row
+	&.info
+		margin-bottom: 36px
+
+		.el-col
+			.form-group
+				> label, span
+					font-weight: 400
+
+.el-textarea
+	.el-textarea__inner
+		border-color: #ababab
+
+.el-card__body
+	padding: 12px 15px !important
+
+/*--------------------------------*\
+	Bootstrap 
+/*--------------------------------*/
+
+.table
+	> :not(caption) 
+		> *
+			> *
+				padding: 10px !important
+
+.table-striped 
+	> tbody 
+		> 
+			tr
+				&:nth-of-type(odd) 
+					> *
+						// --bs-table-accent-bg: #ffffff !important
+
+				&:nth-of-type(even)
+					> *
+						// --bs-table-accent-bg: var(--bs-table-striped-bg) !important
+
+.form-control
+	border: 1px solid #ababab !important
+	border-radius: 4px !important
+
+	&:hover
+		border-color: #C0C4CC !important
+
+	&:focus
+		box-shadow: initial !important
+		border-color: #409EFF !important
+
+.btn-success
+	font-size: 10px !important
+	font-weight: normal !important
+	color: #ffffff !important
+	background-color: #459726 !important
+	border-color: #459726 !important
+
+.btn-primary
+	font-size: 10px !important
+	font-weight: normal !important
+	color: #ffffff !important
+	background-color: #006BB2 !important
+	border-color: #006BB2 !important
+
+.btn-error
+	font-size: 10px !important
+	font-weight: normal !important
+	color: #ffffff !important
+	background-color: #D50D1E !important
+	border-color: #D50D1E !important
+
+.btn-secondary
+	font-size: 10px !important
+	font-weight: normal !important
+	color: #ffffff !important
+	background-color: #6c757d !important
+	border-color: #6c757d !important
+
+@media print
+	@page
+		margin: 0
+		padding: 0
+		size: A4 portrait
+	.openOtherPage
+		table
+			border: 1px solid #e6e6e6
+			// page-break-inside: avoid
+			// page-break-after: always
+
+			tbody
+				tr
+					th
+						font-size: 13px !important
+						padding: 5px !important
+						width: initial !important
+						max-width: initial !important
+						min-width: initial !important
+						white-space: initial !important
+
+					td
+						font-size: 13px !important
+						padding: 5px !important
+						white-space: initial !important
+
+		.break
+			page-break-after: always

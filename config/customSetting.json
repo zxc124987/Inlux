@@ -1,0 +1,124 @@
+{
+  "// 備註": "開發時用 122，佈署後用 apim",
+  "apiUrl1": "https://122.146.250.130/innolux_api/api",
+  "apiUrl2": "https://apim-vendor.innolux.com",
+  "apiUrl": "https://apim-vendor.innolux.com",
+  "APIM_GATEWAY": "https://apim-vendor.innolux.com/",
+  "APP_ID": "01e06571-3a7b-4777-aea9-f0851ecb6ec6",
+
+  "TWOFALOGIN_METHOD": "2FALogin",
+  "TWOFAVERIFY_METHOD": "2FAVerify",
+  "API_GCPNAS": "fe403cf2-f465-458d-b232-f5ef6b0d9c27",
+
+  "isDebug": false,
+
+  "// 1-1": "",
+  "loginController": "login",
+  "getLogin": "01303b70-c2ac-4da4-af6d-04c029689bd6",
+  "postLogin": "ea3f1c4c-2cdf-42f5-b42e-1c34b071b41c",
+
+  "// 1-2~1-4": "",
+  "vendorInfoController": "VendorInfo",
+  "getVendorInfo": "7272795a-2f92-431f-939d-ce9c0a30814a",
+  "postVendorInfo": "2e4ef811-6ea4-4526-b677-2a79dfb6fdbf",
+
+  "// 1-5": "",
+  "courseApplyController": "CourseApply",
+  "getCourseApply": "3b4bb374-ed4c-4cb8-a846-41700466b745",
+  "postCourseApply": "fc7f87ff-da07-434d-89d9-b6dcbeb075c8",
+
+  "// 1-6~1-8": "",
+  "ProjMgmtController": "ProjMgmt",
+  "getProjMgmtController": "7bb89619-6160-4859-9672-a68f2393e717",
+  "postProjMgmtController": "27d22661-ab22-4299-9c18-71167b35a0fa",
+
+  "// 2-1~2-3": "",
+  "getUrgentRepairController": "UrgentRepair",
+  "getUrgentRepair": "f7b4fdfe-5620-4154-86b0-d4264e35f69f",
+  "postUrgentRepair": "a819de3a-5861-4adc-967e-29a9bc6ece9e",
+
+  "// 2-4~2-6": "",
+  "dailyWorkApplyController": "DailyWorkApply",
+  "getDailyWorkApply": "5e15ab0b-ce72-4e5c-8dcb-6b1e403a2bd1",
+  "postDailyWorkApply": "592c3652-d438-4494-986f-93568eabfa52",
+
+  "// 2-7~2-11": "",
+  "ServiceCenterController": "ServiceCenter",
+  "getServiceCenter": "87d49f3a-ce50-4dc6-8d3b-f34ea5a1582b",
+  "postServiceCenter": "0601dba5-bce6-4c0d-892c-00eecc73e8cc",
+
+  "// 2-12~2-13": "",
+  "InsuranceAreaController": "InsuranceArea",
+  "getInsuranceArea": "61780e4e-f3ff-4447-a9b7-c557b8dfadfa",
+  "postInsuranceArea": "f6546bef-1708-4c8e-b9c6-07ad95921f4b",
+
+  "// 2-14~2-15": "",
+  "PrivacyZoneController": "PrivacyZone",
+  "getPrivacyZone": "e13f5ac3-d4f1-46ca-920f-869321c88fc9",
+  "postPrivacyZone": "31e7b0e6-78d6-4264-b08f-91aa17acfadd",
+
+  "// 2-16~2-18": "",
+  "ProtocolAreaController": "ProtocolArea",
+  "getProtocolArea": "858e129c-a8a3-4d62-88ac-7a7c7ed2e481",
+  "postProtocolArea": "11be7d51-3609-4deb-8686-3e215e4b7a0b",
+
+  "// 3-1": "",
+  "PendingFilesController": "PendingFiles",
+  "getPendingFiles": "04f51cfe-b612-411b-83c6-21b7f48a0b39",
+  "postPendingFiles": "0e338efe-bc0c-4adf-8633-48b8fd189714",
+
+  "// 3-2": "",
+  "DocSearchController": "DocSearch",
+  "getDocSearch": "b63b53a1-6e2f-43fd-ab62-034b3fea4ad7",
+  "postDocSearch": "af2df282-6567-4056-a080-7690f9fd9d42",
+
+  "// 3-3~3-12": "",
+  "OSHController": "OSH",
+  "getOSH": "888b8c6c-d7c5-43f1-8d09-03cb3e688ca8",
+  "postOSH": "b3ecdd4c-462c-45f4-b551-054a9344a6b2",
+
+  "// 3-13": "",
+  "ConstructionMgmController": "ConstructionMgm",
+  "getConstructionMgm": "84bd46c1-b0d1-460a-8933-fc4376f8f9af",
+  "postConstructionMgm": "cfc670b7-c032-44f2-8b68-b6f075cc0f5a",
+
+  "// 4-2 menu權限管理": "",
+  "permissionMgmtController": "PermissionMgmt",
+  "getPermissionMgmt": "f71f0845-9560-4d8a-bd55-b489d157c60d",
+  "postPermissionMgmt": "b4d4a6c6-19d9-4cda-bcbb-b7233dfb0737",
+
+  "// 0-0 首頁": "",
+  "frontPageController": "FrontPage",
+  "getFrontPage": "ec09c0fb-8f12-49c9-a564-991796fbbd08",
+  "postFrontPage": "4f06134c-1333-4e62-ac0b-4c7d62328b57",
+  
+  "// 4-4 變更安全衛與監工人員": "",
+  "staffChangeController": "StaffChange",
+  "getStaffChange": "39d3b8c0-3705-49ae-9e87-5898ed1fde54",
+  "postStaffChange": "78ac6907-31b3-4d49-9504-f7aba987a068",
+
+  "// 5-3~5-4": "",
+  "boardController": "Board",
+  "getBoard": "195a2505-f760-42e1-bcbd-edd73c2475dd",
+  "postBoard": "145fe5fb-cb4d-4ed8-a095-797419db86ba",
+
+  "// 3-14~3-15" : "",
+  "vendorLicenseController": "VendorLicense",
+  "getVendorLicense": "1a3ac744-c6f3-4a9f-b4f6-46ca3d2c5738",
+  "postVendorLicense": "61ac6de6-24d4-4eba-bf77-e77310fad22a",
+
+  "// 4-1": "",
+  "fineMgmtController": "FineMgmt",
+  "getFineMgmt": "f2b0b6a1-0f44-49b0-8428-9de159498dc2",
+  "postFineMgmt": "1aa7904d-4281-4e1b-af6b-b7743427a802",
+
+  "// 4-3": "",
+  "idCardApplyController": "IdCardApply",
+  "getIdCardApply": "c9851f83-0349-494e-8131-0e220d31a782",
+  "postIdCardApply": "86523dab-d92e-402f-8773-2baccf2e8a7a",
+
+  "// 5-5~5-6": "",
+  "FileMgmtController": "FileMgmt",
+  "getFileMgmt": "0e030f9c-76ce-46b7-8fbc-0963356a434e",
+  "postFileMgmt": "ea9642be-fc2c-480c-8ba3-c9620769732f"
+}
